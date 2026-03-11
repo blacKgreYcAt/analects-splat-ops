@@ -62,7 +62,7 @@ export default function StoryReader({ lesson, onNext, onBack }: StoryReaderProps
                 className="flex items-center gap-2 bg-ink-black text-white px-4 py-2 border-2 border-ink-black hover:bg-splat-pink transition-colors font-bold transform skew-x-6 text-sm md:text-base"
               >
                 {showOriginal ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                {showOriginal ? '隱藏' : '顯示'}
+                <PhoneticText text={showOriginal ? '隱藏' : '顯示'} />
               </button>
             </div>
 

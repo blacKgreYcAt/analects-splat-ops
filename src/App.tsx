@@ -59,7 +59,7 @@ function App() {
             onClick={() => setViewState('world-select')}
             className="bg-ink-black text-white px-4 py-2 font-display text-xl border-4 border-white brutal-shadow-pink transform -skew-x-6 hover:scale-105 transition-transform"
           >
-            返回世界地圖
+            <PhoneticText text="返回世界地圖" />
           </button>
           <h1 className="hidden md:block text-2xl font-display text-splat-yellow bg-ink-black px-4 py-2 border-4 border-white transform skew-x-3">
             WORLD {currentWorld}: <PhoneticText text={worldBooks.get(currentWorld) || ""} rtClassName="text-white/60" />

@@ -81,7 +81,9 @@ export default function FlashcardGame({ lesson, onComplete, onBack }: FlashcardG
           <p className="text-xl text-ink-black font-bold mb-2">
             <PhoneticText text="你已經掌握了古文！" />
           </p>
-          <p className="text-2xl text-splat-pink font-display mb-8">得分: {score} / {lesson.flashcards.length}</p>
+          <p className="text-2xl text-splat-pink font-display mb-8">
+            <PhoneticText text="得分: " /> {score} / {lesson.flashcards.length}
+          </p>
           <button
             onClick={onComplete}
             className="w-full bg-splat-pink text-white font-display text-3xl py-4 border-4 border-ink-black brutal-shadow hover:-translate-y-2 hover:bg-white hover:text-splat-pink transition-all transform skew-x-6"
@@ -168,7 +170,7 @@ export default function FlashcardGame({ lesson, onComplete, onBack }: FlashcardG
                   disabled={isAnswered}
                   className={`w-full text-left p-4 md:p-6 text-lg md:text-xl font-bold transition-all brutal-shadow-small flex items-center justify-between ${buttonClass}`}
                 >
-                  <span>{option}</span>
+                  <span><PhoneticText text={option} /></span>
                   {isAnswered && isCorrect && <CheckCircle className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />}
                   {isAnswered && isSelected && !isCorrect && <XCircle className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />}
                 </motion.button>
