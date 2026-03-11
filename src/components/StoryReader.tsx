@@ -88,7 +88,7 @@ export default function StoryReader({ lesson, onNext, onBack }: StoryReaderProps
                       <PhoneticText text="白話翻譯" />
                     </h3>
                     <p className="text-base md:text-xl leading-relaxed font-medium">
-                      {lesson.translation}
+                      <PhoneticText text={lesson.translation} />
                     </p>
                   </div>
                 </motion.div>
